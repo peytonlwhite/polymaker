@@ -1,0 +1,55 @@
+# Python and test artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Secrets and machine-local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+bot_settings.json
+crypto_settings.json
+crypto_secrets.dpapi
+
+# Live process state, exchange/account state, and generated JSON datasets
+.*_bot.pid
+.dashboard_test_pid
+*.lock
+/*.json
+/*.jsonl
+/*.lastgood
+/*.bak
+/*.backup.*
+/*.before_*
+/*.pre_*
+/market_discovery.txt
+
+# Logs, temporary files, and retained runtime archives
+*.log
+*_log.txt
+*_events.jsonl
+*.tmp
+archives/
+log_backups/
+
+# Legacy web-bot copy may contain deployment credentials; audit separately
+Betting bots/
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Generated reports and local environments
+*_REVIEW.md
+*_TEST_RESULTS.md
+*_findings.md
+.venv/
+venv/
