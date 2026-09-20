@@ -15,7 +15,8 @@ htmlcov/
 *.pfx
 bot_settings.json
 crypto_settings.json
-crypto_secrets.dpapi
+*.dpapi
+*_private_key*.txt
 
 # Live process state, exchange/account state, and generated JSON datasets
 .*_bot.pid
