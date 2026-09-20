@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# GitHub Free does not enforce branch protection on private repositories.
+# Block accidental direct pushes to main from configured Polymaker clones.
+if [ "${POLYMAKER_ALLOW_MAIN_PUSH:-}" = "1" ]; then
+  exit 0
+fi
+
+while read local_ref local_sha remote_ref remote_sha
+do
+  if [ "$remote_ref" = "refs/heads/main" ]; then
+    echo "Direct pushes to main are blocked for Polymaker." >&2
+    echo "Push a codex/* branch and merge it through a tested pull request." >&2
+    echo "For an intentional emergency override, set POLYMAKER_ALLOW_MAIN_PUSH=1." >&2
+    exit 1
+  fi
+done
+
+exit 0
