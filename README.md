@@ -13,6 +13,9 @@ files local and never force-add them to Git.
 The settings in `.github/test-fixtures/` contain dummy credentials and exist only
 for automated tests. Do not use them as live bot configuration.
 
+See [Local API credentials](LOCAL_CREDENTIALS.md) to enter crypto API keys through
+hidden prompts and store them encrypted on your Windows computer.
+
 ## Local verification
 
 ```powershell
